@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/functional-p.iml" filepath="$PROJECT_DIR$/.idea/functional-p.iml" />
+      <module fileurl="file://$USER_HOME$/codestates/im-self-assessments-02/.idea/im-self-assessments-02.iml" filepath="$USER_HOME$/codestates/im-self-assessments-02/.idea/im-self-assessments-02.iml" />
+      <module fileurl="file://$USER_HOME$/codestates/practice/im-sprint-chatterbox-client-master/.idea/im-sprint-chatterbox-client-master.iml" filepath="$USER_HOME$/codestates/practice/im-sprint-chatterbox-client-master/.idea/im-sprint-chatterbox-client-master.iml" />
     </modules>
   </component>
 </project>

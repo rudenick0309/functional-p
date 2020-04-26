@@ -1,0 +1,23 @@
+<script> const log = console.log;</script>
+
+<script>
+    // ㄷㄴ5
+    const list =  [1,2,3];
+    for ( var i = 0; i < list.length; i++) {
+        log(list[i])
+    }//숫자키로 접근하여 순회하게 했다
+
+    const str = 'abc'
+    for ( var i = 0; i < str.length; i++) {
+        log(str[i])
+    }
+
+    //ㄷㄴ6 - for 문을 보다 간결하
+    for (const a of list) {
+        log(a)
+    }//보다 선언적으로 for of를 통해서
+
+    for (const a of str) {
+        log(a)
+    }
+</script>

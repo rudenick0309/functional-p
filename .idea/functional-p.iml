@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="im-sprint-chatterbox-client-master" />
+    <orderEntry type="module" module-name="im-self-assessments-02" />
   </component>
 </module>
