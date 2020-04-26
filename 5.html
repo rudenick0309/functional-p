@@ -1,23 +1,22 @@
 <script> const log = console.log;</script>
 
 <script>
-    // ㄷㄴ5
-    const list =  [1,2,3];
-    for ( var i = 0; i < list.length; i++) {
-        log(list[i])
-    }//숫자키로 접근하여 순회하게 했다
+   //어레이 세트 맵이 잇는데 모두 for of로 순회할수잇
+   const arr = [1,2,3]
+   // arr{Symbol.iterator] = null;}
+   for(const a of arr) log(a)
+   log('arr===============')
 
-    const str = 'abc'
-    for ( var i = 0; i < str.length; i++) {
-        log(str[i])
-    }
+   const set = new Set([1,2,3])
+   for(const a of set) log(a)
+   log('set===============')
 
-    //ㄷㄴ6 - for 문을 보다 간결하
-    for (const a of list) {
-        log(a)
-    }//보다 선언적으로 for of를 통해서
+   const map = new Map([['a',1],['b',2],['c',3]])
+   for(const a of map) log(a)
+   log('map===============')
 
-    for (const a of str) {
-        log(a)
-    }
+    /*
+    이터러플 이터레이터
+    포오브문이 , 어레이가 이터러블이고, 어레이는 심볼이터레이터를 통해서 이터레이터를 리턴하기 떄문
+     */
 </script>
