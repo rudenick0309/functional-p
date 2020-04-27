@@ -4,15 +4,27 @@
    //어레이 세트 맵이 잇는데 모두 for of로 순회할수잇
    const arr = [1,2,3]
    // arr{Symbol.iterator] = null;}
-   for(const a of arr) log(a)
+
+   // done 이 true가 되면 for 를 빠져 나온다
+   let iter1 = arr[Symbol.iterator]();
+   iter1.next()
+   iter1.next();
+   for(const a of iter1) log(a)
    log('arr===============')
 
    const set = new Set([1,2,3])
    for(const a of set) log(a)
+   // 이터러블 프로토콜을 따르고 있기 때문에 for가 동작하는 것이다 증가하는 i가 아니라!
    log('set===============')
 
    const map = new Map([['a',1],['b',2],['c',3]])
-   for(const a of map) log(a)
+   for(const a of map.keys()) log(a)
+   for(const a of map.values()) log(a)
+   for(const a of map.entries()) log(a)
+   // let mapIterator = map.keys();   //키만뽑을 수 있다.
+   // log(mapIterator)
+   //이터레이터로 만든 것을 다시 [Symbol.interator]를 통해서 다시 순회할 수 있다.
+   //즉 , 이터레이터가 다시 이터레이터를 리턴하는 것.
    log('map===============')
 
     /*
