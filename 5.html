@@ -31,4 +31,43 @@
     이터러플 이터레이터
     포오브문이 , 어레이가 이터러블이고, 어레이는 심볼이터레이터를 통해서 이터레이터를 리턴하기 떄문
      */
+
+    //사용자 정의이터러블
+   log('0428 사용자정의 이터러블================================')
+    const iterable = {
+        [Symbol.iterator]() {
+            let i = 3;
+            return {
+                next() {
+                    return i==0? {done:true} : { value: i--, done:false }
+                },
+                [Symbol.iterator]() { return this; }//이터레이터도 이터러블이 되게
+            }
+        }
+    }
+    let iterator = iterable[Symbol.iterator]();
+   //  log(iterator.next());
+   // log(iterator.next());
+   // log(iterator.next());
+
+    // for (const a of iterable) log(a);
+    const arr2 = [1,2,3];
+    let iter2 = arr2[Symbol.iterator]();
+    iter2.next();
+    //잘 만들어진 이터레이터는 이터레이터를 만들었을 떄 진행되었을떄 순회를 할수도 있고,
+   // for of 문에 넣었을 떄 모든 값들을 순회할수 있도록 되어있다
+   log(iter2[Symbol.iterator]()==iter2)
+   // 이터레이터가 자기 자신을 반환하는 심볼 이터레이터 메소드를 가지고 이씅ㄹ 떄 웰펑드이터레이터라고 할수 있다.
+    for (const a of iter2) log(a);
+
+    for (const a of document.querySelectorAll('*')) log(a)
+    //이터레이터가 구현이 되있기 떄문에 가능한 것.
+    const all = document.querySelectorAll('*');
+    let iter3 = all[Symbol.iterator]();
+    log(iter3.next());
+   log(iter3.next());
+   log(iter3.next());
+
+
+
 </script>
